@@ -29,8 +29,10 @@ namespace Infinity.IdentityServer
         {
             services.AddControllersWithViews();
 
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<ApplicationDbContext>(options =>  
+                options.UseSqlServer("Data Source=DESKTOP-2OMAE54;database=Infinity.IdentityServer.Try1;trusted_connection=yes;"));
+            //services.AddDbContext<ApplicationDbContext>(options =>
+            //    options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddIdentity<InfinityUser, InfinityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()

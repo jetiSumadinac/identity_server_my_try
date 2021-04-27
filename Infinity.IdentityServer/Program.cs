@@ -49,7 +49,8 @@ namespace Infinity.IdentityServer
                 {
                     Log.Information("Seeding database...");
                     var config = host.Services.GetRequiredService<IConfiguration>();
-                    var connectionString = config.GetConnectionString("DefaultConnection");
+                    //var connectionString = config.GetConnectionString("DefaultConnection");
+                    var connectionString = "Data Source=DESKTOP-2OMAE54;database=Infinity.IdentityServer.Try1;trusted_connection=yes;";
                     SeedData.EnsureSeedData(connectionString);
                     Log.Information("Done seeding database.");
                     return 0;
