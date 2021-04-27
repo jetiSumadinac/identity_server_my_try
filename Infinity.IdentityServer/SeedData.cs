@@ -7,7 +7,6 @@ using System.Linq;
 using System.Security.Claims;
 using IdentityModel;
 using Infinity.IdentityServer.Data;
-using Infinity.IdentityServer.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;

@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using System.Collections.Generic;
 
-namespace Infinity.IdentityServer.Models
+namespace Infinity.IdentityServer.Data
 {
     // Add profile data for application users by adding properties to the ApplicationUser class
     public class InfinityUser : IdentityUser<long>

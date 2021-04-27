@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using System;
 
-namespace Infinity.IdentityServer.Models
+namespace Infinity.IdentityServer.Data
 {
     public class InfinityUserRole : IdentityUserRole<long>
     {

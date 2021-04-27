@@ -4,7 +4,6 @@
 
 using IdentityServer4;
 using Infinity.IdentityServer.Data;
-using Infinity.IdentityServer.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
