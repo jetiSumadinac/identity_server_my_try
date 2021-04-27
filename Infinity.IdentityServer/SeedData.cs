@@ -23,7 +23,7 @@ namespace Infinity.IdentityServer
             services.AddDbContext<ApplicationDbContext>(options =>
                options.UseSqlite(connectionString));
 
-            services.AddIdentity<InfinityUser, IdentityRole>()
+            services.AddIdentity<InfinityUser, InfinityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
