@@ -1,12 +1,10 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Infinity.IdentityServer.Data
 {
-    public class InfinityRole : IdentityRole<long>
+    public class InfinityRole : IdentityRole<Guid>
     {
         public ICollection<InfinityUserRole> Users { get; } = new List<InfinityUserRole>();
         public InfinityRole() { }
