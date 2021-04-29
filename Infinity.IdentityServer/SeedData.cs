@@ -23,7 +23,7 @@ namespace Infinity.IdentityServer
             services.AddDbContext<ApplicationDbContext>(options =>
                options.UseSqlServer(connectionString));
 
-            services.AddIdentity<InfinityUser, InfinityRole>()
+            services.AddIdentity<IdentityUser, InfinityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
@@ -34,11 +34,11 @@ namespace Infinity.IdentityServer
                     var context = scope.ServiceProvider.GetService<ApplicationDbContext>();
                     context.Database.Migrate();
 
-                    var userMgr = scope.ServiceProvider.GetRequiredService<UserManager<InfinityUser>>();
+                    var userMgr = scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
                     var alice = userMgr.FindByNameAsync("alice").Result;
                     if (alice == null)
                     {
-                        alice = new InfinityUser
+                        alice = new IdentityUser
                         {
                             UserName = "alice",
                             Email = "AliceSmith@email.com",
@@ -70,7 +70,7 @@ namespace Infinity.IdentityServer
                     var bob = userMgr.FindByNameAsync("bob").Result;
                     if (bob == null)
                     {
-                        bob = new InfinityUser
+                        bob = new IdentityUser
                         {
                             UserName = "bob",
                             Email = "BobSmith@email.com",

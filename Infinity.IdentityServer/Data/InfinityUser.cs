@@ -7,8 +7,8 @@ namespace Infinity.IdentityServer.Data
     // Add profile data for application users by adding properties to the ApplicationUser class
     public class InfinityUser : IdentityUser<Guid>
     {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        //public string FirstName { get; set; }
+        //public string LastName { get; set; }
         public ICollection<InfinityUserRole> Roles { get; set; }
     }
 }

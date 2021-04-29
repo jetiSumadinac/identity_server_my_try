@@ -27,12 +27,12 @@ namespace Infinity.IdentityServer.Data
             // For example, you can rename the ASP.NET Identity table names and more.
             // Add your customizations after calling base.OnModelCreating(builder);
 
-            builder.Entity<InfinityUser>(e =>
+            builder.Entity<IdentityUser>(e =>
             {
                 e.Property(p => p.Id).HasDefaultValue(Guid.NewGuid());//TODO generate Id here
-                e.HasMany(p => p.Roles).WithOne(r => r.User).HasForeignKey(r => r.UserId).IsRequired();
-                e.Property(p => p.FirstName).IsRequired();
-                e.Property(p => p.LastName).IsRequired();
+                //e.HasMany(p => p.Roles).WithOne(r => r.User).HasForeignKey(r => r.UserId).IsRequired();
+                //e.Property(p => p.FirstName).IsRequired();
+                //e.Property(p => p.LastName).IsRequired();
             });
             builder.Entity<InfinityRole>(e => {
                 e.Property(p => p.Id).HasDefaultValue(Guid.NewGuid());//TODO generate default value here
